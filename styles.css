@@ -1,3 +1,10 @@
+:root {
+    --color-bright: rgb(40, 141, 40);
+    --color-medium: rgb(22, 75, 22);
+    --color-dark: rgb(13, 44, 13);
+    --color-shadow: rgb(7, 24, 7);
+}
+
 
 body {
     display: flex;
@@ -5,46 +12,121 @@ body {
     justify-content: center;
     background-color: #121212;
     height: 100vh;
-    width: 100vw;
     margin: 0;
+    font-family:'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 1.25rem;
 }
 
 .leftSection {
     display: flex;
     flex-direction: column;
-    width: 25vw;
-    text-align: center;
+    justify-content: space-around;
+    flex-grow: 1;
     background-image: url("treeStatue.avif");
+    background-position: 50% 90%;
+    background-size: 1500px 1100px;
+
 }
 
 .transpBanner {
-    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
     background-color: black;
+    color: white;
     opacity: 50%;
-    width: 25vw;
-    top: 25vh;
+    height: 225px;
+    font-family: 'Audiowide', cursive;
+    font-size: 6rem;
+}
+
+img {
+    opacity: 80%;
 }
 
 .rightSection {
-    background-color: aliceblue;
+    background-color: var(--color-dark);
+    color: white;
     display: flex;
     flex-direction: column;
-    width: 45vw;
     text-align: center;
     justify-content: center;
+    position: sticky;
+    right: 0;
+    width: 800px;
 }
 
 .signupHeader {
     height: 25vh;
-    margin-top: 10vh;
+    margin-top: 10vh;    
+    opacity: 80%;
 }
 
 .signupForm {
-    height: 25vh;
+    justify-content: center;
+    background-color: var(--color-medium);
+    min-height: 400px;
+    min-width: 500px;
+    box-shadow: 5px 5px 5px var(--color-shadow);
+}
 
+.signupIntro {
+    padding: 1vh;
+}
+
+.signupBoxes {
+    display: flex;
+    flex: column;
+    flex-wrap: wrap;
+    justify-content: center;
+    text-align: left;
+    height: 250px;
+    flex-grow: 1;
+} 
+
+.boxOne, .boxTwo {
+    padding-left: 1vw;
+    padding-right: 2vw;
+}
+
+input {
+    border-radius: 5px;
+    height: 25px;
+    width: inherit;
+    background-color: var(--color-dark);
+    color: white;
 }
 
 .createAccount {
     height: 25vh;
-
+    padding: 2vh;
 }
+
+button {
+    border-radius: 4rem;
+    height: 6rem;
+    width: 12rem;
+    font-size: 1.5rem;
+    background-color: var(--color-medium);
+    color: white;
+    font-weight: 900;
+    text-shadow: 3px 3px 2px var(--color-shadow);
+    border: .5rem solid var(--color-bright);
+    cursor: pointer;
+}
+
+.labelBr {
+    display: block; /* makes it have a width */
+    content: ""; /* clears default height */
+    margin-top: 3px; /* change this to whatever height you want it */
+}
+
+a, a:visited {
+    text-decoration: none;
+    font-weight: 900;
+    color: var(--color-bright);
+    font-size: 1.5rem;
+}
+
+
+
