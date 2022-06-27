@@ -5,7 +5,6 @@
     --color-shadow: rgb(7, 24, 7);
 }
 
-
 body {
     display: flex;
     flex-direction: row;
@@ -22,10 +21,9 @@ body {
     flex-direction: column;
     justify-content: space-around;
     flex-grow: 1;
-    background-image: url("treeStatue.avif");
-    background-position: 50% 90%;
-    background-size: 1500px 1100px;
-
+    background-image: url("images/treeStatue.avif");
+    background-position: 50%;
+    background-size: 80vw 100vh;
 }
 
 .transpBanner {
@@ -45,62 +43,73 @@ img {
 }
 
 .rightSection {
-    background-color: var(--color-dark);
-    color: white;
+    background: linear-gradient(90deg, #121212, rgb(22, 75, 22));
+    color: rgb(230, 230, 230);
     display: flex;
     flex-direction: column;
     text-align: center;
     justify-content: center;
     position: sticky;
     right: 0;
-    width: 800px;
+    min-width: 800px;
 }
 
-.signupHeader {
-    height: 25vh;
-    margin-top: 10vh;    
+.signupHeader { 
     opacity: 80%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    min-height: 250px;
 }
 
 .signupForm {
     justify-content: center;
     background-color: var(--color-medium);
-    min-height: 400px;
-    min-width: 500px;
     box-shadow: 5px 5px 5px var(--color-shadow);
 }
 
 .signupIntro {
-    padding: 1vh;
+    padding: 1rem;
+}
+
+form {
+    display: flex;
 }
 
 .signupBoxes {
     display: flex;
     flex: column;
-    flex-wrap: wrap;
     justify-content: center;
     text-align: left;
     height: 250px;
-    flex-grow: 1;
 } 
 
 .boxOne, .boxTwo {
-    padding-left: 1vw;
-    padding-right: 2vw;
+    padding-left: 1rem;
+    padding-right: 1rem;
 }
 
 input {
     border-radius: 5px;
     height: 25px;
-    width: inherit;
+    width: 300px;
     background-color: var(--color-dark);
     color: white;
 }
 
-.createAccount {
-    height: 25vh;
-    padding: 2vh;
+input:invalid {
+    border: 3px solid var(--color-shadow)
 }
+
+input:valid {
+    border: 3px solid var(--color-bright)
+}
+
+.createAccount {
+    padding: 2rem;
+}
+
+
 
 button {
     border-radius: 4rem;
@@ -111,14 +120,15 @@ button {
     color: white;
     font-weight: 900;
     text-shadow: 3px 3px 2px var(--color-shadow);
+    box-shadow: 3px 3px 2px var(--color-shadow);
     border: .5rem solid var(--color-bright);
     cursor: pointer;
 }
 
 .labelBr {
-    display: block; /* makes it have a width */
-    content: ""; /* clears default height */
-    margin-top: 3px; /* change this to whatever height you want it */
+    display: block; 
+    content: ""; 
+    margin-top: 3px; 
 }
 
 a, a:visited {
@@ -128,5 +138,18 @@ a, a:visited {
     font-size: 1.5rem;
 }
 
+/* mobile display settings */
+@media only screen and (max-width: 600px)  {
+    .leftSection {
+        display: none;
+    }
 
+    .rightSection {
+        min-height: 100vh;
+        min-width: 100vw;
+    }
 
+    input {
+        width: 40vw;
+    }
+}

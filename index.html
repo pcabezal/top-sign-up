@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Sign it up yo</title>
+    <title>Sign it up</title>
     <link rel="stylesheet" href="styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -23,50 +23,52 @@
         <div class="rightSection">
             <div class="signupHeader">
                 
-                <h2>Haven't you ever dreamed of being a face in a tree?</h2> <br>
-                <h3>Silly question, I know - who hasnt?
-                <p></p>            
-                The few moments it takes to fill out this form will bring you <br>
+                <h2>Haven't you ever dreamed of being a face in a tree?</h2>
+                          
+                <h3>The few moments it takes to fill out this form will bring you <br>
                 that much closer to reaching your life's conculusion!
                 </h3>
             </div>
 
             <div class="signupForm">
                 <div class="signupIntro">
-                    What have you got to lose?
+                    Sign up now and begin your journey!
                 </div>
-                <div class="signupBoxes">  
+                <div class="signupBoxes">
+
+                    <form id="myForm" action="#">                   
                     <div class="boxOne">
                         <label for="firstName">First Name:</label><br class="labelBr">
-                        <input type="text" id="firstName" name="firstName" placeholder="Robert">
+                        <input type="text" id="firstName" name="firstName" placeholder="Robert" required>
                         <p></p>
                         <label for="email">Email:</label><br class="labelBr">
-                        <input type="email" id="email" name="email" placeholder="your@mom.com">
+                        <input type="email" id="email" name="email" placeholder="davy@jones.com" required>
                         <p></p>
                         <label for="password">Password:</label><br class="labelBr">
-                        <input type="password" name="password" id="password">
-                        <br>
-                    </div>       
+                        <input type="password" name="password" id="password" required>                                           
+                    </div>      
+
                     <div class="boxTwo">
                         <label for="lastName">Last Name:</label><br class="labelBr">
-                        <input type="text" id="lastName" name="lastName" placeholder="Paulson">
+                        <input type="text" id="lastName" name="lastName" placeholder="Paulson" required>
                         <p></p>
                         <label for="phone">Phone:</label><br class="labelBr">
-                        <input type="text" id="phone" name="phone" placeholder="867-5309">
+                        <input type="text" id="phone" name="phone" placeholder="800-867-5309" pattern="(^\s*(?:\+?(\d{1,3}))?[-. (]*(\d{3})[-. )]*(\d{3})[-. ]*(\d{4})(?: *x(\d+))?\s*$)" title="Please enter valid phone number including area code" required>
                         <p></p>
                         <label for="confirm">Confirm Password:</label><br class="labelBr">
-                        <input type="password" name="confirm" id="confirm">
-                    </div>           
+                        <input type="password" name="confirm" id="confirm" required>
+                    </div>  
+                             
                 </div>                
             </div>
 
             <div class="createAccount">
-                Don't have an account already?<p></p>
-                <button type="submit">Create<br> Account</button>
+                <button type="submit">Create<br> Account</button> </form>
                 <p></p>
                 Already have an account? <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">Log In</a>
             </div>
         </div>
 
+        <script src="script.js" defer></script>
 </body>
 </html>
